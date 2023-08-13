@@ -1,3 +1,6 @@
+import qualified Data.Map as Map
+juxt x (f:fs) = map (\t -> (t x)) (f:fs)
+constant value = \args -> value
 variable name = \args -> ((Map.fromList args) Map.! name)
 abstract f start = \exprs -> (\args -> (foldl f start (juxt args exprs)))
 add = abstract (+) 0
