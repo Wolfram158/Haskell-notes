@@ -7,7 +7,7 @@ add = abstract (+) (\x -> x)
 multiply = abstract (*) (\x -> x)
 sub = abstract (-) (\x -> x)
 sumexp = abstract (+) exp
-ln = abstract (\x y -> log ((exp x) + (exp y))) (\x -> log x)
+ln = abstract (\x y -> log ((exp x) + (exp y))) log 
 lse = \es -> ln [sumexp es]
 divide = \(e:es) -> (\args -> (if (length es) == 0 then (1 / (e args)) else (foldl (/) (e args) (juxt args es))))
 f = constant 8
