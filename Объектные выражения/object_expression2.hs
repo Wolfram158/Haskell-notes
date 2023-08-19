@@ -3,7 +3,7 @@ data Expression = Constant Int | Variable String | Add Expression Expression | M
 instance Show Expression where
   show (Constant value) = show value
   show (Variable name) = name
-  show (Add (Constant x) (Constant y)) = show (x + y)
+  show (Add (Constant x) (Constant y)) = show (x + y) // ------> toMiniString
   show (Add x y) = mconcat ["(", (show x), "+", (show y), ")"]
   show (Multiply x y) = mconcat [(show x), "*", (show y)]
 evaluate :: Expression -> [(String, Int)] -> Int
