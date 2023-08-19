@@ -24,3 +24,4 @@ main = do
          putStrLn $ show $ evaluate c [("x", 101), ("y", 10)]
          putStrLn $ show c
          putStrLn $ show $ diff c "z"
+         putStrLn $ show $ diff (Multiply (Variable "x") (Variable "x")) "x"
