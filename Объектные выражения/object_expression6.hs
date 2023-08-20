@@ -156,6 +156,6 @@ main = do
                                                                  (Add (Constant 3) (Constant 4))) "x"
          putStrLn $ show $ simplify $ diff c "z"
          putStrLn $ show $ simplify $ Add (Add (Constant 0) (Constant 0)) (Constant 0)
-         putStrLn $ show $ toMiniString c
-         putStrLn $ show $ toMiniString d
-         putStrLn $ show $ toMiniString $ simplify $ Add (Add (Multiply (Constant 0) (Variable "x")) (Constant 3)) (Constant 4)
+         putStrLn $ toMiniString c
+         putStrLn $ toMiniString d
+         putStrLn $ toMiniString $ simplify $ Add (Add (Multiply (Constant 0) (Variable "x")) (Constant 3)) (Constant 4)
