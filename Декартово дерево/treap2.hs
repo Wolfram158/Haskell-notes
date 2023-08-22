@@ -4,10 +4,10 @@ data Tree = Empty | Tree Tree (Integer, Integer) Tree deriving (Eq, Show)
 
 split :: Tree -> Integer -> (Tree, Tree)
 split Empty key = (Empty, Empty)
-split (Tree left (x, y) right) key = let (left1, right1) = (split right x)
-                                         (left2, right2) = (split left x)
+split (Tree left (x, y) right) key = let (left1, right1) = (split right key)
+                                         (left2, right2) = (split left key)
                                      in
-                                     if key > y then
+                                     if key > x then
                                          (Tree left (x, y) left1, right1)
                                      else
                                          (left2, Tree right2 (x, y) right)
