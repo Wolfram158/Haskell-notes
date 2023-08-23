@@ -13,7 +13,6 @@ mergeSort list signal = let len = floor ((fromIntegral (length list)) / 2)
                         merge (mergeSort (take len list) signal) (mergeSort (drop len list) signal) signal
 
 main = do
-          putStrLn "Done"
           putStrLn $ show $ merge [2, 3, 4, 8, 10, 100] [-1, 4, 9, 11] (<)
           putStrLn $ show $ merge [4, 3, 2, 0, -1] [11, 9, 4, -1] (>)
           putStrLn $ show $ mergeSort [3, -5, 9, 11, -5, -2, 1, 2, 4] (<)
