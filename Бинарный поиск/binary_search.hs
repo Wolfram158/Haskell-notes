@@ -32,3 +32,4 @@ main = do
           putStrLn $ show $ binarySearch [1, 8, 100, 200, 200, 200, 300, 500, 1000] 200 (<) (==) True
           putStrLn $ show $ binarySearch [1, 8, 100, 200, 200, 200, 300, 500, 1000] 201 (<=) (<=) False
           putStrLn $ show $ binarySearch [1, 8, 100, 200, 200, 200, 300, 500, 1000] 200 (<) (<) False
+          putStrLn $ show $ binarySearch [70, 30, 30, 30, 20, 10, 10, 10, 5, 4, 3, 2] 6 (>=) (<) True
