@@ -7,8 +7,6 @@ quickSort list = let mid = list !! floor (fromIntegral (length list) / 2)
                            (quickSort [t | t <- list, t > mid])
 
 statistic :: Ord a => [a] -> Int -> Maybe a
-statistic [x] 0 = Just x
-statistic [x] _ = Nothing
 statistic list k
        | k >= length list = Nothing
        | length less <= k && greater == [] = Just (equal !! (k - length less))
