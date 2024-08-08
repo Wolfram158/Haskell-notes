@@ -23,10 +23,11 @@ descent = \n -> (\f -> (\df -> (\start -> (\b1 -> (\b2 -> (\eps
                                            in
                                                answer next_v next_G x next_x (iter + 1)
   let desired = answer current_v current_G last_x start 0
+  let (sel1, sel2, sel3) = desired
   let print name value = putStrLn $ name <> (show value)
-  print "Found min point: " (sel1 desired)
-  print "Value of function at found min point: " (sel2 desired)
-  print "Count of iterations: " (sel3 desired)
+  print "Found min point: " sel1
+  print "Value of function at found min point: " sel2
+  print "Count of iterations: " sel3
   )))))))))
 }
 
