@@ -1,12 +1,3 @@
 .stack-work/
 stack.yaml.lock
 *~
-*
-!.gitignore
-!./test/Spec.hs
-!./src/HW5/Action.hs
-!./src/HW5/Base.hs
-!./src/HW5/Evaluator.hs
-!./src/HW5/Parser.hs
-!./src/HW5/Pretty.hs
-!./app/Main.hs
